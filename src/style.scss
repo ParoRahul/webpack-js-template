@@ -1,0 +1,17 @@
+$primary: cadetblue;
+$danger: rgb(245, 27, 11);
+
+@import '~bootstrap/scss/bootstrap';
+
+
+.formholder{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(168, 208, 209);
+}
+
+.form-width{
+    width: 325px;
+}
