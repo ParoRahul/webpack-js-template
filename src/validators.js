@@ -3,6 +3,9 @@ const passwordip = document.getElementById('password');
 
 userNameip.addEventListener("input", function (event) {
     userNameip.setCustomValidity('');
+    // Add Code to disable the Button untill input ares not valid
+    // Add Code to display field spefic error
+    userNameip.checkValidity();
 });
 
 userNameip.addEventListener('invalid', () => {
@@ -12,6 +15,8 @@ userNameip.addEventListener('invalid', () => {
 
 passwordip.addEventListener("input", function (event) {
     passwordip.setCustomValidity('');
+    // Add Code to disable the Button untill input ares not valid
+    // Add Code to display field spefic error
 });
 
 passwordip.addEventListener('invalid', () => {
