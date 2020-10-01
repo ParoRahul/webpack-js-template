@@ -1,26 +1,36 @@
 const userNameip = document.getElementById('userName');
 const passwordip = document.getElementById('password');
 
-const clearAlert = () => document.querySelectorAll('.dispalrt').forEach( item => {
-    item.classList.add('d-none')
+userNameip.addEventListener("input", function (event) {
+    userNameip.setCustomValidity('');
 });
 
-userNameip.addEventListener('change', clearAlert);
+userNameip.addEventListener('invalid', () => {
+    console.log('from u name');
+    //userNameip.setCustomValidity('');
+});
 
-passwordip.addEventListener('change', clearAlert);
+passwordip.addEventListener("input", function (event) {
+    passwordip.setCustomValidity('');
+});
 
-export function validateUserName(){
-    const userName = document.getElementById('userName').value;
-    if (userName){
-        return true
-    } 
-    return false
+passwordip.addEventListener('invalid', () => {
+    console.log('from password');
+});
+
+export const getFormData = (form) => {
+    const inputs = form.querySelectorAll('input');
+    let values = {};
+    form.querySelectorAll('input').forEach( (element)=>{
+        values[element.id] = element.value;
+    });
+    return values;
 }
 
-export function validatePassowrd(){
-    const password = document.getElementById('password').value;
-    if (password){
-        return true
-    } 
-    return false
+export const addListerforError = (form) => {
+    form.querySelectorAll('input').forEach( (element)=>{
+       element.addEventListener('input',()=>{
+            document.querySelector('#alertarea').classList.add('hidden')
+       });
+    });
 }

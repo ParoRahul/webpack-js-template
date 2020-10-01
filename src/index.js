@@ -1,22 +1,20 @@
-import {validateUserName, validatePassowrd } from './validators'
+import {addListerforError, getFormData } from './validators'
 import "./style.scss";
 
 const loginbtn = document.getElementById('login');
 
+const loginForm = document.querySelector('form');
+
 loginbtn.addEventListener('click', (event) =>{
     event.preventDefault();
     event.stopPropagation();
-    // items = document.getElementsByClassName('alert').forEach( item => item.classList.add('hide'));
-    // console.log(document.querySelectorAll('.alert'));
-   
-    if (validatePassowrd() && validateUserName() ){
-        const alersElememt = document.getElementById('alerts');
-        alersElememt.classList.remove('d-none');
-        console.log('Sucess');
+    if( !loginForm.checkValidity() ){
+        document.querySelector('#alertarea').classList.remove('hidden');
     } else {
-        const alerdElememt = document.getElementById('alertd');
-        alerdElememt.classList.remove('d-none');
-        console.log('Error')
+        const data = getFormData(loginForm);
+        console.log(data);
+        loginForm.reset();
     }
-    //console.log('End')
 });
+
+addListerforError(loginForm);
