@@ -1,5 +1,6 @@
-import {addListerforError, getFormData } from './validators'
 import "./style.scss";
+import {addListerforError, getFormData } from './validators'
+
 
 const loginbtn = document.getElementById('login');
 
