@@ -34,8 +34,8 @@ export const getFormData = (form) => {
 
 export const addListerforError = (form) => {
     form.querySelectorAll('input').forEach( (element)=>{
-       element.addEventListener('input',()=>{
+        element.addEventListener('input',() => {
             document.querySelector('#alertarea').classList.add('hidden')
-       });
+        });
     });
 }

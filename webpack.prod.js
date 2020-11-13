@@ -15,16 +15,16 @@ module.exports = merge(common,{
                 new CleanWebpackPlugin()
     ],
     module:{
-        rules: [
+        rules: 
+        [
             {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
-                },
-                {
-                test: /\.scss$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-                }
+            test: /\.css$/i,
+            use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+            {
+            test: /\.scss$/i,
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            }
         ]
     }        
-
 });

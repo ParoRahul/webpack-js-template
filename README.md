@@ -1,6 +1,7 @@
 # Webpack template for vanila js project 
 ![webpack](https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg) Fearures
 * Bootstrap
+* Material icons
 * html template
 * image plugin
 * scss plugin
