@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "plugins": [],
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "ignorePatterns": [ "build/*", "node_modules/*" ],
+    "rules": {
+      "filenames/match-exported": "off",
+      "semi": ["error", "always", { "omitLastInOneLineBlock": true } ],
+      "comma-spacing": ["error", { "before": false, "after": true }],
+      "indent": ["error", 4],
+      "quotes": ["error", "single"],
+      "no-eval": ["error"],
+      "no-var": ["error"],
+      "no-use-before-define": "off",
+      "no-prototype-builtins": "off"
+    }
+}

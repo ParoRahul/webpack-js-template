@@ -1,11 +1,14 @@
+'use strict';
+
 const userNameip = document.getElementById('userName');
 const passwordip = document.getElementById('password');
 
-userNameip.addEventListener("input", function (event) {
+userNameip.addEventListener('input', function (event) {
     userNameip.setCustomValidity('');
     // Add Code to disable the Button untill input ares not valid
     // Add Code to display field spefic error
     userNameip.checkValidity();
+    console.log(event);
 });
 
 userNameip.addEventListener('invalid', () => {
@@ -13,8 +16,9 @@ userNameip.addEventListener('invalid', () => {
     //userNameip.setCustomValidity('');
 });
 
-passwordip.addEventListener("input", function (event) {
+passwordip.addEventListener('input', function (event) {
     passwordip.setCustomValidity('');
+    console.log(event);
     // Add Code to disable the Button untill input ares not valid
     // Add Code to display field spefic error
 });
@@ -30,12 +34,12 @@ export const getFormData = (form) => {
         values[element.id] = element.value;
     });
     return values;
-}
+};
 
 export const addListerforError = (form) => {
     form.querySelectorAll('input').forEach( (element)=>{
-        element.addEventListener('input',() => {
-            document.querySelector('#alertarea').classList.add('hidden')
+        element.addEventListener('input', () => {
+            document.querySelector('#alertarea').classList.add('hidden');
         });
     });
-}
+};

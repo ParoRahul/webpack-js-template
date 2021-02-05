@@ -1,6 +1,7 @@
-import "./style.scss";
-import {addListerforError, getFormData } from './validators'
+'use strict';
 
+import './media/style.scss';
+import {addListerforError, getFormData } from './validators';
 
 const loginbtn = document.getElementById('login');
 
@@ -13,7 +14,7 @@ loginbtn.addEventListener('click', (event) =>{
         document.querySelector('#alertarea').classList.remove('hidden');
     } else {
         const data = getFormData(loginForm);
-        console.log(data);
+        console.log(data); 
         loginForm.reset();
     }
 });
