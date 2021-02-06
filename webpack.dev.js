@@ -8,16 +8,16 @@ const PORT = 8081;
 
 module.exports = merge(common, {
     mode: 'development',
+    devtool: 'inline-source-map',
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, 'build'),
-        publicPath: `http://localhost:${PORT}`
+        publicPath: ''
     },
     plugins: [  new MiniCssExtractPlugin({filename: '[name].css'}) ],
     devServer:{
         host: 'localhost',
         port : PORT,
-        contentBase: path.resolve(__dirname, 'build'),
         hot: true
     }
 });

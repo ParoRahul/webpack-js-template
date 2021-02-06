@@ -1,9 +1,20 @@
 # Webpack template for vanila js project 
-![webpack](https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg) Fearures
-* Bootstrap
-* Material icons
+![webpack](https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg) 
+
+
+Webpack Plug in
+
 * html template
 * image plugin
 * scss plugin
-* config dor dev and prod mode
 * cleaning build dir
+* Eslint for Typescript Code
+
+# Bootstrap + Material icons
+
+# Eslint for Typescript
+
+# Hot Reload
+
+## To do List
+* Testing With Mocha & Chai 
