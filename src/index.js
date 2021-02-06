@@ -20,3 +20,7 @@ loginbtn.addEventListener('click', (event) =>{
 });
 
 addListerforError(loginForm);
+
+if (module.hot){
+    module.hot.accept();
+}
