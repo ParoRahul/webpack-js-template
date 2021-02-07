@@ -17,16 +17,7 @@ module.exports = {
                 test: /\.html$/i,
                 use: ['html-loader'],
             },
-            {
-                test: /\.(eot|ttf|woff|woff2|svg|png|jpeg)$/i,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'images'
-                    }
-                },
-            }
+            
         ],
     },
     resolve: {

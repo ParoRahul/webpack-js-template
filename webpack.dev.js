@@ -12,6 +12,16 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2|svg|png|jpeg)$/i,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images'
+                    }
+                },
             }
         ]
     },
