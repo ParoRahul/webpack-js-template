@@ -7,10 +7,12 @@ module.exports = {
     entry: path.resolve(__dirname, 'src', 'index.js'),
     module: {
         rules: [
-            /* {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-            }, */
+            {
+                test: /(?!test\.)\.js$/,
+                use: ['babel-loader'],
+                include: [path.resolve(__dirname, 'src')],
+                exclude: [path.resolve(__dirname, 'test'), path.resolve(__dirname, 'node_modules') ]
+            },
             {
                 test: /\.scss$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],

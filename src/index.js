@@ -19,8 +19,13 @@ loginbtn.addEventListener('click', (event) =>{
     }
 });
 
+const es6arrowFunc = (name) => console.log(name);
+
+es6arrowFunc('Rahul Das ...');
+
 addListerforError(loginForm);
 
 if (module.hot){
+    console.log('Hot Reloading Enabled');
     module.hot.accept();
 }
