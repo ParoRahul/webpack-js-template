@@ -10,7 +10,7 @@ Webpack Plug in
 * cleaning build dir
 * Eslint for Typescript Code
 
-# Bootstrap + Material icons
+# Bootstrap + Bootstrap icons
 
 # Eslint for Typescript
 

@@ -16,14 +16,7 @@ module.exports = {
             {
                 test: /\.html$/i,
                 use: ['html-loader'],
-            },
-            {
-                test: /\.(woff|woff2)$/i,
-                use: {
-                    loader: 'url-loader',
-                },
             }
-            
         ],
     },
     resolve: {
