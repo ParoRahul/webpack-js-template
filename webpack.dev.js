@@ -11,10 +11,14 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.scss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: [
+                    'style-loader',
+                    {loader: 'css-loader', options: { sourceMap: true} }, 
+                    {loader: 'sass-loader', options: { sourceMap: true}}
+                ],
             },
             {
-                test: /\.(eot|ttf|woff|woff2|svg|png|jpeg)$/i,
+                test: /\.(eot|ttf|svg|png|jpeg|jpg)$/i,
                 use: {
                     loader: 'file-loader',
                     options: {

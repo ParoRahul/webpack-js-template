@@ -14,7 +14,7 @@ module.exports = merge(common, {
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|ttf|woff|woff2|svg|png|jpeg)$/i,
+                test: /\.(eot|ttf|svg|png|jpeg|jpg)$/i,
                 use: {
                     loader: 'file-loader',
                     options: {
